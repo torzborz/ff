@@ -1,0 +1,131 @@
+<div id="scene">
+	<style type="text/css">
+/*** scene_TravelAgency ***/
+.scene_TravelAgency {
+	/*background-image: urlshit("img/scene_TravelAgency/travelagency_bg.jpg");*/
+}
+.scene_TravelAgency .exit {
+	background-image: url(img/scene_TravelAgency/exit.png);
+	position: absolute;
+	width: calc(295px / 2);
+	height: calc(183px / 2);
+	left: calc(723px / 2);
+	top: calc(765px / 2);
+	cursor: pointer;
+}
+.scene_TravelAgency .boat {
+	background: url(img/scene_TravelAgency/boat.png);
+	position: absolute;
+	width: calc(2209px / 2);
+	height: calc(1047px / 2);
+	left: calc(2792px / 2);
+	top: calc(-18px / 2);
+
+	transform-origin: 50% -100%;
+	animation: swing;
+	animation-direction: alternate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.scene_TravelAgency .airplane {
+	pointer-events: none;
+	background: url(img/scene_TravelAgency/airplane.png);
+	position: absolute;
+	width: calc(1280px / 2);
+	height: calc(1025px / 2);
+	left: calc(-33px / 2);
+	top: calc(-30px / 2);
+
+	transform-origin: 50% -100%;
+	animation: swing;
+	animation-direction: alternate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.scene_TravelAgency .people {
+	-webkit-mask-image: url(img/scene_TravelAgency/asztal-mask.png);
+	-webkit-mask-position: 0 -200px;
+	-webkit-mask-repeat: no-repeat;
+	mask: url(#TravelAgencyMask);
+	width: calc(2405px / 2);
+	height: calc(1224px / 2);
+	left: calc(1427px / 2);
+	top: calc(1198px / 2);
+	position: absolute;
+}
+.scene_TravelAgency .woman {
+	background-image: url(img/scene_TravelAgency/woman-1.png);
+	width: 309px;
+	height: 455px;
+	left: calc(1383px - 714px);
+	top: calc(957px - 799px);
+	position: absolute;
+
+	animation: tulip;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(48, start);
+}
+.scene_TravelAgency .man {
+	background-image: url(img/scene_TravelAgency/man-1.png);
+	width: 371px;
+	height: 546px;
+	left: calc(884px - 714px);
+	top: calc(905px - 799px);
+	position: absolute;
+
+	animation: tulip;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(48, start);
+}
+.scene_TravelAgency.hearted .woman {
+	background-image: url(img/scene_TravelAgency/woman-1.png);
+}
+.scene_TravelAgency.hearted .man {
+	background-image: url(img/scene_TravelAgency/man-1.png);
+}
+.scene_TravelAgency.hearted .rays {
+	background-image: url(img/scene_TravelAgency/rays.png);
+	width: calc(977px / 2);
+	height: calc(330px / 2);
+	left: calc(1500px / 2);
+	top: calc(1540px / 2);
+}
+.scene_TravelAgency.hearted .click {
+	background-image: url(img/scene_TravelAgency/click.png);
+	width: calc(721px / 2);
+	height: calc(450px / 2);
+	left: calc(1532px / 2);
+	top: calc(1752px / 2);
+}
+	</style>
+	<div style="display: none;">
+		<img src="img/scene_TravelAgency/exit.png" />
+		<img src="img/scene_TravelAgency/boat.png" />
+		<img src="img/scene_TravelAgency/airplane.png" />
+		<img src="img/scene_TravelAgency/asztal-mask.png" />
+		<img src="img/scene_TravelAgency/woman-1.png" />
+		<img src="img/scene_TravelAgency/man-1.png" />
+		<img src="img/scene_TravelAgency/woman-1.png" />
+		<img src="img/scene_TravelAgency/man-1.png" />
+		<img src="img/scene_TravelAgency/rays.png" />
+		<img src="img/scene_TravelAgency/click.png" />		
+	</div>
+	<img src="img/scene_TravelAgency/travelagency_bg.jpg" />
+	<div id="exit" class="exit"></div>
+	<div class="people">
+		<div class="man"></div>
+		<div class="woman"></div>
+	</div>
+	<div class="table"></div>
+	<div class="rays"></div>
+	<div id="click" class="click"></div>
+	<div class="hero"></div>
+	<div class="foreground">
+		<div class="boat"></div>
+		<div class="airplane"></div>
+	</div>
+</div>

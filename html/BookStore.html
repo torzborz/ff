@@ -1,0 +1,127 @@
+<div id="scene">
+	<style type="text/css">
+/*** scene_BookStore ***/
+.scene_BookStore {
+	/*background-image: url(img/scene_BookStore/bookstore_bg.jpg);*/
+}
+.scene_BookStore #tulip {
+	background-image: url(img/scene_BookStore/tulip.png);
+	position: absolute;
+	width: calc(838px / 2);
+	height: calc(1417px / 2);
+	left: calc(4362px / 2);
+	top: calc(1468px / 2);
+
+	animation: tulip;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(48, start);
+}
+.scene_BookStore #curtain-left {
+	background-image: url(img/scene_BookStore/curtain-left.png);
+	position: absolute;
+	width: 397px;
+	height: 777px;
+	left: 710px;
+	top: 128px;
+
+	animation: tulip;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(48, start);
+	pointer-events: none;
+}
+.scene_BookStore #curtain-right {
+	background-image: url(img/scene_BookStore/curtain-right.png);
+	position: absolute;
+	width: 340px;
+	height: 699px;
+	left: 985px;
+	top: 170px;
+
+	animation: tulip;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(48, start);
+}
+.scene_BookStore #woman {
+	background-image: url(img/scene_BookStore/woman-1.png);
+	position: absolute;
+	width: 657px;
+	height: 1292px;
+	left: 260px;
+	top: 542px;
+
+	animation: bookstore-woman;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(36, start);
+}
+.scene_BookStore.hearted #woman {
+	background-image: url(img/scene_BookStore/woman-2.png);
+	background-position: 100%;
+
+	animation: bookstore-woman-look;
+	animation-duration: .8s;
+	animation-iteration-count: 1;
+	animation-timing-function: steps(19, end);
+}
+.scene_BookStore .exit {
+	background-image: url(img/scene_BookStore/exit.png);
+	position: absolute;
+	width: calc(245px / 2);
+	height: calc(186px / 2);
+	left: calc(1316px / 2);
+	top: calc(307px / 2);
+	cursor: pointer;
+}
+.scene_BookStore.hearted .rays {
+	background-image: url(img/scene_BookStore/rays.png);
+	width: calc(1119px / 2);
+	height: calc(682px / 2);
+	left: calc(3077px / 2);
+	top: calc(1458px / 2);
+}
+.scene_BookStore.hearted .click {
+	background-image: url(img/scene_BookStore/click.png);
+	width: calc(1037px / 2);
+	height: calc(789px / 2);
+	left: calc(2794px / 2);
+	top: calc(1774px / 2);
+}
+.scene_BookStore .laptop {
+	background-image: url(img/scene_BookStore/screen.png);
+	width: calc(736px / 2);
+	height: calc(637px / 2);
+	left: calc(2996px / 2);
+	top: calc(1847px / 2);
+}
+.scene_BookStore.hearted .laptop {
+	background-image: url(img/scene_BookStore/heart.png);
+}
+	</style>
+	<div style="display: none;">
+		<img src="img/scene_BookStore/tulip.png" />
+		<img src="img/scene_BookStore/curtain-left.png" />
+		<img src="img/scene_BookStore/curtain-right.png" />
+		<img src="img/scene_BookStore/woman-1.png" />
+		<img src="img/scene_BookStore/woman-2.png" />
+		<img src="img/scene_BookStore/exit.png" />
+		<img src="img/scene_BookStore/rays.png" />
+		<img src="img/scene_BookStore/click.png" />
+		<img src="img/scene_BookStore/screen.png" />
+		<img src="img/scene_BookStore/heart.png" />
+	</div>
+	<img src="img/scene_BookStore/bookstore_bg.jpg" />
+	<div id="exit" class="exit"></div>
+	<div id="curtain-left"></div>
+	<div id="curtain-right"></div>
+	<div class="hero"></div>
+	<div class="table"></div>
+	<div id="tulip"></div>
+	<div class="laptop"></div>
+	<div id="woman"></div>
+	<div class="rays"></div>
+	<div id="click" class="click"></div>
+	<div class="foreground"></div>
+</div>
