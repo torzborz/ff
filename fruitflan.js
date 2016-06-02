@@ -313,8 +313,10 @@ function sceneLoaded() {
 
 	document.getElementById('exit').onclick = flyBack;
 	document.getElementById('click').onclick = startVideo;
-	document.getElementById('scene').onclick = function() {
-		this.className = this.className + ' hearted';
+	document.getElementById('scene').onclick = function(e) {
+		if (e.target.id != 'exit') {
+			this.className = this.className + ' hearted';
+		}
 	};
 
 	imagesLoaded( 'body', { background: 'div' }, function() {
