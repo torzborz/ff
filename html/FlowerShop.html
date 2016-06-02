@@ -1,0 +1,80 @@
+<div id="scene">
+	<style type="text/css">
+/*** scene_FlowerShop ***/
+.scene_FlowerShop {
+	/*background-image: url(img/scene_FlowerShop/flowershop_bg.jpg);*/
+}
+.scene_FlowerShop .exit {
+	background-image: url(img/scene_FlowerShop/exit.png);
+	position: absolute;
+	width: calc(320px / 2 * 0.3915);
+	height: calc(184px / 2 * 0.3915);
+	left: calc(4262px / 2 * 0.3915);
+	top: calc(810px / 2 * 0.3915);
+	cursor: pointer;
+}
+.scene_FlowerShop .laptop {
+	background-image: url(img/scene_FlowerShop/screen.png);
+	width: calc(224px / 2 * 0.3915);
+	height: calc(319px / 2 * 0.3915);
+	left: calc(4019px / 2 * 0.3915);
+	top: calc(1900px / 2 * 0.3915);
+}
+.scene_FlowerShop.hearted .laptop {
+	background-image: url(img/scene_FlowerShop/heart.png);
+}
+.scene_FlowerShop.hearted .rays {
+	background-image: url(img/scene_FlowerShop/rays.png);
+	width: calc(689px / 2 * 0.3915);
+	height: calc(461px / 2 * 0.3915);
+	left: calc(3742px / 2 * 0.3915);
+	top: calc(1641px / 2 * 0.3915);
+}
+.scene_FlowerShop.hearted .click {
+	background-image: url(img/scene_FlowerShop/click.png);
+	width: calc(564px / 2 * 0.3915);
+	height: calc(290px / 2 * 0.3915);
+	left: calc(3923px / 2 * 0.3915);
+	top: calc(1937px / 2 * 0.3915);
+}
+.scene_FlowerShop #woman {
+	background-image: url(img/scene_FlowerShop/woman-1.png);
+	position: absolute;
+	width: calc(524px * 0.3915);
+	height: calc(796px * 0.3915);
+	left: calc(2076px * 0.3915);
+	top: calc(734px * 0.3915);
+
+	animation: tulip;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(48, start);
+}
+.scene_FlowerShop.hearted #woman {
+	background-image: url(img/scene_FlowerShop/woman-4.png);
+
+	animation: flowershop-woman;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(49, start);
+}
+	</style>
+	<div style="display: none;">
+		<img src="img/scene_FlowerShop/exit.png" />
+		<img src="img/scene_FlowerShop/screen.png" />
+		<img src="img/scene_FlowerShop/heart.png" />
+		<img src="img/scene_FlowerShop/rays.png" />
+		<img src="img/scene_FlowerShop/click.png" />
+		<img src="img/scene_FlowerShop/woman-1.png" />
+		<img src="img/scene_FlowerShop/woman-4.png" />
+	</div>
+	<img src="img/scene_FlowerShop/flowershop_bg.jpg" />
+	<div id="exit" class="exit"></div>
+	<div class="table"></div>
+	<div class="hero"></div>
+	<div class="laptop"></div>
+	<div id="woman"></div>
+	<div class="rays"></div>
+	<div id="click" class="click"></div>
+	<div class="foreground"></div>
+</div>
