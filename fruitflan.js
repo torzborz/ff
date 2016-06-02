@@ -221,14 +221,14 @@ function setupCity() {
 	c5.style.webkitTransform = '';
 
 	mx = window.innerWidth / 2;
-	my = window.innerHeight;
+	my = window.innerHeight / 2;
 
 	WIDTH = window.innerWidth / cityDimensions.w;
 	HEIGHT = window.innerHeight / cityDimensions.h;
 	COVER = Math.max(WIDTH, HEIGHT);
 	CONTAIN = Math.min(WIDTH, HEIGHT);
 
-	var aspect = Math.max( window.innerWidth / window.innerHeight * .8, 1 );
+	var aspect = Math.max( window.innerWidth / window.innerHeight * .8, 1 )
 
 	COVER *= aspect;
 	// COVER = .5;
