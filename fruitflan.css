@@ -1,4 +1,8 @@
 body {
+	margin: 0;
+}
+/*
+body {
 	background-color: #111;
 	margin: 0;
 	height: 100vh;
@@ -6,8 +10,9 @@ body {
 	overflow: hidden;
 	position: relative;
 }
-
+*/
 #FruitflanAnimation {
+	background-color: #111;
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
@@ -407,4 +412,12 @@ body {
 	to {
 		background-position: -1900%;
 	}
+}
+
+.mobile .neon {
+	opacity: 1;
+	transition: none;
+}
+.mobile .neon.lit {
+	opacity: 1;
 }
