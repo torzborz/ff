@@ -246,9 +246,8 @@ body {
 }
 
 #scene {
-	/*height: 100%;*/
-	width: calc(5200px / 2);
-	height: calc(3677px / 2);
+	width: 1018px;
+	height: 720px;
 	position: relative;
 	transform-origin: 0 0;
 	/*transform: translateX(calc(-1920px / 2));*/

@@ -1,3 +1,4 @@
+var isAutoplayEnabled
 var scenes = {
 	NewsRoom: {
 		video: 'video/Real_time_decision_1080p_24fps_H264_DIN.mov'
@@ -32,8 +33,8 @@ var cityDimensions = {
 }
 
 var enteriorDimensions = {
-	w: 5200/2,
-	h: 3677/2
+	w: 1018,
+	h: 720
 }
 
 var sceneNode;
@@ -50,6 +51,16 @@ sceneLoader.responseType='document';
 var targetScene = '';
 
 mx = my = ox = oy = 0;
+
+Modernizr.on('videoautoplay', function(result) {
+  if (result) {
+    // supported
+    isAutoplayEnabled = true;
+  } else {
+    // not-supported
+    isAutoplayEnabled = false;
+  }
+});
 
 function resize() {
 	if ( inCity ) {
