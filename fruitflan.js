@@ -228,7 +228,9 @@ function setupCity() {
 	COVER = Math.max(WIDTH, HEIGHT);
 	CONTAIN = Math.min(WIDTH, HEIGHT);
 
-	// COVER *= 1.5;
+	var aspect = Math.max( window.innerWidth / window.innerHeight * .8, 1 );
+
+	COVER *= aspect;
 	// COVER = .5;
 
 	w = cityDimensions.w * COVER;
