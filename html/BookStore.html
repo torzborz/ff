@@ -7,23 +7,23 @@
 .scene_BookStore #tulip {
 	background-image: url(img/scene_BookStore/tulip.png);
 	position: absolute;
-	width: calc(838px / 2 * 0.3915);
-	height: calc(1417px / 2 * 0.3915);
-	left: calc(4362px / 2 * 0.3915);
-	top: calc(1468px / 2 * 0.3915);
+	width: 165px;
+	height: 278px;
+	left: 853px;
+	top: 287px;
 
 	animation: tulip;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: steps(48, start);
 }
-.scene_BookStore #curtain-left {
-	background-image: url(img/scene_BookStore/curtain-left.png);
+.scene_BookStore #curtain {
+	background-image: url(img/scene_BookStore/curtains.png);
 	position: absolute;
-	width: calc(397px * 0.3915);
-	height: calc(777px * 0.3915);
-	left: calc(710px * 0.3915);
-	top: calc(128px * 0.3915);
+	width: 238px;
+	height: 295px;
+	left: 279px;
+	top: 54px;
 
 	animation: tulip;
 	animation-duration: 2s;
@@ -31,26 +31,13 @@
 	animation-timing-function: steps(48, start);
 	pointer-events: none;
 }
-.scene_BookStore #curtain-right {
-	background-image: url(img/scene_BookStore/curtain-right.png);
-	position: absolute;
-	width: calc(340px * 0.3915);
-	height: calc(699px * 0.3915);
-	left: calc(985px * 0.3915);
-	top: calc(170px * 0.3915);
-
-	animation: tulip;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: steps(48, start);
-}
 .scene_BookStore #woman {
 	background-image: url(img/scene_BookStore/woman-1.png);
 	position: absolute;
-	width: calc(657px * 0.3915);
-	height: calc(1292px * 0.3915);
-	left: calc(260px * 0.3915);
-	top: calc(542px * 0.3915);
+	width: 256px;
+	height: 507px;
+	left: 110px;
+	bottom: -3px;
 
 	animation: bookstore-woman;
 	animation-duration: 2s;
@@ -99,6 +86,23 @@
 .scene_BookStore.hearted .laptop {
 	background-image: url(img/scene_BookStore/heart.png);
 }
+.scene_BookStore .table-bg {
+	background-image: url(img/scene_BookStore/table-bg.png);
+	pointer-events: none;
+	position: absolute;
+	width: 1018px;
+	height: 720px;
+	left: 0;
+	top: 0;
+}
+.scene_BookStore .table-fg {
+	background-image: url(img/scene_BookStore/table-fg.png);
+	position: absolute;
+	width: 685px;
+	height: 380px;
+	bottom: 0;
+	right: 0;
+}
 	</style>
 	<div style="display: none;">
 		<img src="img/scene_BookStore/tulip.png" />
@@ -114,10 +118,10 @@
 	</div>
 	<img src="img/scene_BookStore/bookstore_bg.jpg" />
 	<div id="exit" class="exit"></div>
-	<div id="curtain-left"></div>
-	<div id="curtain-right"></div>
+	<div id="curtain"></div>
+	<div class="table-bg"></div>
 	<div class="hero"></div>
-	<div class="table"></div>
+	<div class="table-fg"></div>
 	<div id="tulip"></div>
 	<div class="laptop"></div>
 	<div id="woman"></div>

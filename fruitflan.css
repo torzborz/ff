@@ -376,6 +376,23 @@ body {
 		background-position: -3600%;
 	}
 }
+@keyframes s11 {
+	from {
+		background-position: 0;
+	}
+	to {
+		background-position: -1100%;
+	}
+}
+
+@keyframes s24 {
+	from {
+		background-position: 0;
+	}
+	to {
+		background-position: -2400%;
+	}
+}
 
 @keyframes flowershop-woman {
 	from {
@@ -388,10 +405,10 @@ body {
 
 @keyframes tulip {
 	from {
-		background-position: 0;
+		background-position: 0, 0;
 	}
 	to {
-		background-position: -4800%;
+		background-position: -4800%, -4800%;
 	}
 }
 

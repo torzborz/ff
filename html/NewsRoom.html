@@ -72,11 +72,11 @@
 	background-image: url(img/scene_NewsRoom/hearts.png);
 }
 .scene_NewsRoom .yellow {
-	background-image: url(img/scene_NewsRoom/y-1.png);
-	width: calc(318px * 0.3915);
-	height: calc(373px * 0.3915);
-	left: calc(927px * 0.3915);
-	top: calc(444px * 0.3915);
+	background-image: url(img/scene_NewsRoom/yellow-1.png);
+	width: 125px;
+	height: 147px;
+	left: 363px;
+	top: 173px;
 	position: absolute;
 
 	animation: s36;
@@ -85,11 +85,11 @@
 	animation-timing-function: steps(36, start);
 }
 .scene_NewsRoom .sand {
-	background-image: url(img/scene_NewsRoom/s-1.png);
-	width: calc(354px * 0.3915);
-	height: calc(323px * 0.3915);
-	left: calc(161px * 0.3915);
-	top: calc(409px * 0.3915);
+	background-image: url(img/scene_NewsRoom/sand-1.png);
+	width: 139px;
+	height: 127px;
+	left: 63px;
+	top: 160px;
 	position: absolute;
 
 	animation: s36;
@@ -98,11 +98,11 @@
 	animation-timing-function: steps(36, start);
 }
 .scene_NewsRoom .red {
-	background-image: url(img/scene_NewsRoom/r-1.png);
-	width: calc(629px * 0.3915);
-	height: calc(973px * 0.3915);
-	left: calc(1512px * 0.3915);
-	top: calc(593px * 0.3915);
+	background-image: url(img/scene_NewsRoom/red-1.png);
+	width: 247px;
+	height: 381px;
+	left: 592px;
+	top: 232px;
 	position: absolute;
 
 	animation: s36;
@@ -111,17 +111,41 @@
 	animation-timing-function: steps(36, start);
 }
 .scene_NewsRoom .green {
-	background-image: url(img/scene_NewsRoom/g-1.png);
-	width: calc(604px * 0.3915);
-	height: calc(916px * 0.3915);
-	left: calc(201px * 0.3915);
-	top: calc(697px * 0.3915);
+	background-image: url(img/scene_NewsRoom/green-1.png);
+	width: 224px;
+	height: 359px;
+	left: 92px;
+	top: 273px;
 	position: absolute;
 
 	animation: s36;
 	animation-duration: 1.5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: steps(36, start);
+}
+.scene_NewsRoom.hearted .yellow {
+	background-image: url(img/scene_NewsRoom/yellow-2.png);
+}
+.scene_NewsRoom.hearted .sand {
+	background-image: url(img/scene_NewsRoom/sand-2.png);
+}
+.scene_NewsRoom.hearted .red {
+	background-image: url(img/scene_NewsRoom/red-2.png);
+}
+.scene_NewsRoom.hearted .green {
+	background-image: url(img/scene_NewsRoom/green-2.png);
+}
+.scene_NewsRoom.hearted .yellow,
+.scene_NewsRoom.hearted .sand,
+.scene_NewsRoom.hearted .red,
+.scene_NewsRoom.hearted .green {
+	/*background-position: -1100%;*/
+	animation: s11;
+	animation-direction: alternate;
+	animation-duration: .55s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-timing-function: steps(11, end);
 }
 	</style>
 	<div style="display: none;">
@@ -133,10 +157,10 @@
 		<img src="img/scene_NewsRoom/news.png" />
 		<img src="img/scene_NewsRoom/screens.png" />
 		<img src="img/scene_NewsRoom/hearts.png" />
-		<img src="img/scene_NewsRoom/y-1.png" />
-		<img src="img/scene_NewsRoom/s-1.png" />
-		<img src="img/scene_NewsRoom/r-1.png" />
-		<img src="img/scene_NewsRoom/g-1.png" />
+		<img src="img/scene_NewsRoom/yellow-1.png" />
+		<img src="img/scene_NewsRoom/sand-1.png" />
+		<img src="img/scene_NewsRoom/red-1.png" />
+		<img src="img/scene_NewsRoom/green-1.png" />
 	</div>
 	<img src="img/scene_NewsRoom/newsroom_bg.jpg" />
 	<div class="sand"></div>
