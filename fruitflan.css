@@ -430,6 +430,33 @@ body {
 	}
 }
 
+@keyframes hero-returns {
+	from {
+		background-position: 0;
+	}
+	to {
+		background-position: -5700%;
+	}
+}
+
+.hearted .hero {
+	pointer-events: none;
+	background: url(img/hero-returns.png);
+	position: absolute;
+	width: 742px;
+	height: 450px;
+	/*top: 161px;*/
+	top: 50px;
+	/*left: -100px;*/
+	left: -265px;
+	animation: hero-returns;
+	animation-duration: 2.41s;
+	animation-iteration-count: 1;
+	animation-timing-function: steps(57, end);
+	transform: scale(1.5);
+	background-position: -5700%;
+}
+
 .mobile .neon {
 	opacity: 1;
 	transition: none;

@@ -23,8 +23,17 @@
 	left: 0;
 	top: 0;
 }
-.scene_NewsRoom .foreground {
-	background-image: url(img/scene_NewsRoom/szeksarok_eloterben.png);
+.scene_NewsRoom .foreground-1 {
+	background-image: url(img/scene_NewsRoom/fg-1.png);
+	position: absolute;
+	pointer-events: none;
+	width: 1018px;
+	height: 720px;
+	left: 0;
+	bottom: 0;
+}
+.scene_NewsRoom .foreground-2 {
+	background-image: url(img/scene_NewsRoom/fg-2.png);
 	position: absolute;
 	width: 161px;
 	height: 193px;
@@ -147,11 +156,17 @@
 	animation-iteration-count: 1;
 	animation-timing-function: steps(11, end);
 }
+.hearted .hero {
+	top: 0;
+	left: -300px;
+}
+
 	</style>
 	<div style="display: none;">
 		<img src="img/scene_NewsRoom/exit.png" />
 		<img src="img/scene_NewsRoom/gepek_asztal.png" />
-		<img src="img/scene_NewsRoom/szeksarok_eloterben.png" />
+		<img src="img/scene_NewsRoom/fg-1.png" />
+		<img src="img/scene_NewsRoom/fg-2.png" />
 		<img src="img/scene_NewsRoom/rays.png" />
 		<img src="img/scene_NewsRoom/click.png" />
 		<img src="img/scene_NewsRoom/news.png" />
@@ -171,8 +186,9 @@
 	<div class="tvs"></div>
 	<div class="red"></div>
 	<div class="green"></div>
+	<div class="foreground-1"></div>
 	<div class="rays"></div>
 	<div id="click" class="click"></div>
 	<div class="hero"></div>
-	<div class="foreground"></div>
+	<div class="foreground-2"></div>
 </div>
