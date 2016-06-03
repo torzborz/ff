@@ -55,7 +55,7 @@
 	top: calc(1198px / 2 * 0.3915);
 	position: absolute;
 }
-.scene_TravelAgency .woman {
+.scene_TravelAgency #woman {
 	background-image: url(img/scene_TravelAgency/woman-1.png);
 	width: 122px;
 	height: 179px;
@@ -63,12 +63,12 @@
 	top: calc(158px * 0.3915);
 	position: absolute;
 
-	animation: tulip;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: steps(48, start);
+	/*animation: tulip;*/
+	/*animation-duration: 2s;*/
+	/*animation-iteration-count: infinite;*/
+	/*animation-timing-function: steps(48, start);*/
 }
-.scene_TravelAgency .man {
+.scene_TravelAgency #man {
 	background-image: url(img/scene_TravelAgency/man-1.png);
 	width: 145px;
 	height: 214px;
@@ -76,15 +76,15 @@
 	top: calc(106px * 0.3915);
 	position: absolute;
 
-	animation: tulip;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: steps(48, start);
+	/*animation: tulip;*/
+	/*animation-duration: 2s;*/
+	/*animation-iteration-count: infinite;*/
+	/*animation-timing-function: steps(48, start);*/
 }
-.scene_TravelAgency.hearted .woman {
+.scene_TravelAgency.hearted #woman {
 	background-image: url(img/scene_TravelAgency/woman-3.png), url(img/scene_TravelAgency/woman-1.png);
 }
-.scene_TravelAgency.hearted .man {
+.scene_TravelAgency.hearted #man {
 	background-image: url(img/scene_TravelAgency/man-3.png), url(img/scene_TravelAgency/man-1.png);
 }
 .scene_TravelAgency.hearted .rays {
@@ -101,7 +101,7 @@
 	left: calc(1532px / 2 * 0.3915);
 	top: calc(1752px / 2 * 0.3915);
 }
-.hearted .hero {
+#hero {
 	top: 0;
 	left: -200px;
 }
@@ -121,13 +121,13 @@
 	<img src="img/scene_TravelAgency/travelagency_bg.jpg" />
 	<div id="exit" class="exit"></div>
 	<div class="people">
-		<div class="man"></div>
-		<div class="woman"></div>
+		<div id="man"></div>
+		<div id="woman"></div>
 	</div>
 	<div class="table"></div>
 	<div class="rays"></div>
 	<div id="click" class="click"></div>
-	<div class="hero"></div>
+	<div id="hero" class="hero"></div>
 	<div class="foreground">
 		<div class="boat"></div>
 		<div class="airplane"></div>

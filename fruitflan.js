@@ -114,7 +114,7 @@ function init() {
 
 
 	imagesLoaded( 'body', function() {
-		console.log('all div background images loaded');
+		// console.log('all div background images loaded');
 		TweenMax.to(baseNode, 1, {opacity: 1});
 	});
 }
@@ -150,7 +150,40 @@ function flyTo( target ) {
 function initTravelAgency() {
 	mx = window.innerWidth / 2 - window.innerWidth / 5;
 	my = window.innerHeight / 2 - window.innerHeight / 8;
+
+	var element = document.querySelector('#man');
+	var man = new Motio(element, {
+		fps: 24,
+		frames: 48
+	});
+	man.play();
+
+	var element = document.querySelector('#woman');
+	var woman = new Motio(element, {
+	    fps: 24,
+	    frames: 48
+	});
+	woman.play();
+	heroFlyIn();
 }
+
+function heroFlyIn() {
+	var element = document.querySelector('#hero');
+	var hero = new Motio(element, {
+		fps: 24,
+		frames: 58
+	});
+	hero.toEnd( function() {
+		hero.destroy();
+		heroFloating();
+	} );
+}
+
+function heroFloating() {
+	var element = document.querySelector('#hero');
+	element.className = 'looping';
+}
+
 function initBookStore() {
 	mx = window.innerWidth / 2 - window.innerWidth / 8;
 	my = window.innerHeight / 2 - window.innerHeight / 8;
@@ -316,7 +349,7 @@ function setAnimator(method) {
 }
 
 function sceneLoaded() {
-	console.log('sceneLoaded');
+	// console.log('sceneLoaded');
 
 	var content = sceneLoader.response.getElementById('scene');
 	sceneNode.parentNode.replaceChild(content, sceneNode);
@@ -333,7 +366,7 @@ function sceneLoaded() {
 	};
 
 	imagesLoaded( 'body', { background: 'div' }, function() {
-		console.log('scene images loaded');
+		// console.log('scene images loaded');
 		// TweenMax.to(baseNode, 1, {opacity: 1});
 		fadeIn();
 	});
