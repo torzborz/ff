@@ -443,17 +443,14 @@ body {
 	pointer-events: none;
 	background: url(img/hero-returns.png);
 	position: absolute;
-	width: 742px;
-	height: 450px;
-	/*top: 161px;*/
-	top: 50px;
-	/*left: -100px;*/
-	left: -265px;
+	width: 1112px;
+	height: 675px;
+	left: -420px;
+	top: 0;
 	animation: hero-returns;
-	animation-duration: 2.41s;
+	animation-duration: 2.4s;
 	animation-iteration-count: 1;
 	animation-timing-function: steps(57, end);
-	transform: scale(1.5);
 	background-position: -5700%;
 }
 
