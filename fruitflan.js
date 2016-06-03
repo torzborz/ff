@@ -403,10 +403,19 @@ function startVideo() {
 	videojs(document.getElementById('video'), {}, function() {
 		sceneNode.style.opacity = 0;
 		this.play();
-		this.on("ended", videoEnded);
+		this.on('ended', videoEnded);
 	});
+	videoNode.addEventListener('pause', videoPaused);
+	videoNode.addEventListener('click', function() {
+		videoNode.pause();
+		videoEnded();
+	})
 }
-
+function videoPaused() {
+	if (!videoNode.webkitDisplayingFullscreen) {
+		videoEnded();
+	}
+}
 function videoEnded() {
 	baseNode.style.opacity = 0;
 	var vid = document.getElementById('video');
