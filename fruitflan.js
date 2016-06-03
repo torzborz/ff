@@ -147,6 +147,25 @@ function flyTo( target ) {
 	fadeOut();
 }
 
+function heroFlyIn() {
+	document.getElementById('scene').className = document.getElementById('scene').className + ' hearted';
+
+	var element = document.querySelector('#hero');
+	var hero = new Motio(element, {
+		fps: 24,
+		frames: 58
+	});
+	hero.toEnd( function() {
+		hero.destroy();
+		heroFloating();
+	} );
+}
+
+function heroFloating() {
+	var element = document.querySelector('#hero');
+	element.className = 'looping';
+}
+
 function initTravelAgency() {
 	mx = window.innerWidth / 2 - window.innerWidth / 5;
 	my = window.innerHeight / 2 - window.innerHeight / 8;
@@ -164,42 +183,33 @@ function initTravelAgency() {
 	    frames: 48
 	});
 	woman.play();
-	heroFlyIn();
-}
 
-function heroFlyIn() {
-	var element = document.querySelector('#hero');
-	var hero = new Motio(element, {
-		fps: 24,
-		frames: 58
-	});
-	hero.toEnd( function() {
-		hero.destroy();
-		heroFloating();
-	} );
+	TweenMax.to(baseNode, 3, {onComplete: heroFlyIn});
 }
-
-function heroFloating() {
-	var element = document.querySelector('#hero');
-	element.className = 'looping';
-}
-
 function initBookStore() {
 	mx = window.innerWidth / 2 - window.innerWidth / 8;
 	my = window.innerHeight / 2 - window.innerHeight / 8;
+
+	TweenMax.to(baseNode, 3, {onComplete: heroFlyIn});
 }
 function initFlowerShop() {
 	mx = window.innerWidth / 8 * 6.5;
 	my = window.innerHeight / 2 - window.innerHeight / 8;
+
+	TweenMax.to(baseNode, 3, {onComplete: heroFlyIn});
 }
 function initStockMarket() {
 	// mx = window.innerWidth;
 	// my = window.innerHeight / 2 - window.innerHeight / 8;
+
+	TweenMax.to(baseNode, 3, {onComplete: heroFlyIn});
 }
 function initNewsRoom() {
 	mx = window.innerWidth;
 	my = 0;
 	// my = window.innerHeight / 2 - window.innerHeight / 8;
+
+	TweenMax.to(baseNode, 3, {onComplete: heroFlyIn});
 }
 
 function setupScene() {
@@ -359,15 +369,13 @@ function sceneLoaded() {
 
 	document.getElementById('exit').onclick = flyBack;
 	document.getElementById('click').onclick = startVideo;
-	document.getElementById('scene').onclick = function(e) {
-		if (e.target.id != 'exit') {
-			this.className = this.className + ' hearted';
-		}
-	};
+	// document.getElementById('scene').onclick = function(e) {
+	// 	if (e.target.id != 'exit') {
+	// 		this.className = this.className + ' hearted';
+	// 	}
+	// };
 
 	imagesLoaded( 'body', { background: 'div' }, function() {
-		// console.log('scene images loaded');
-		// TweenMax.to(baseNode, 1, {opacity: 1});
 		fadeIn();
 	});
 }

@@ -441,12 +441,14 @@ body {
 
 #hero {
 	pointer-events: none;
-	background: url(img/hero-returns.png);
 	position: absolute;
 	width: 1112px;
 	height: 675px;
 	left: -420px;
 	top: 0;
+}
+.hearted #hero {
+	background: url(img/hero-returns.png);
 }
 #hero.looping {
 	background: url(img/hero-floating.png);
