@@ -447,11 +447,25 @@ body {
 	left: -420px;
 	top: 0;
 }
-.hearted #hero {
-	background: url(img/hero-returns.png);
+#hero #fly,
+#hero #loop {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
-#hero.looping {
+#hero #fly {
+	background: url(img/hero-returns.png);	
+	background-position: left;
+}
+#hero #loop {
+	opacity: 0;
 	background: url(img/hero-floating.png);
+	background-position: left;
+}
+#hero.looping #loop{
 	animation-name: hero-loop;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;

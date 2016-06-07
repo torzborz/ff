@@ -150,7 +150,7 @@ function flyTo( target ) {
 function heroFlyIn() {
 	document.getElementById('scene').className = document.getElementById('scene').className + ' hearted';
 
-	var element = document.querySelector('#hero');
+	var element = document.querySelector('#hero #fly');
 	var hero = new Motio(element, {
 		fps: 24,
 		frames: 58
@@ -163,6 +163,10 @@ function heroFlyIn() {
 
 function heroFloating() {
 	var element = document.querySelector('#hero');
+	var loop = document.querySelector('#hero #loop');
+	var fly = document.querySelector('#hero #fly');
+	fly.style.display = 'none';
+	loop.style.opacity = 1;
 	element.className = 'looping';
 }
 
