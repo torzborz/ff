@@ -53,6 +53,30 @@
 	animation-iteration-count: 1;
 	animation-timing-function: steps(19, end);
 }
+
+@keyframes bookstore-woman-squint {
+	from {
+		background-position: 0%;
+	}
+	to {
+		background-position: -1000%;
+	}
+}
+.scene_BookStore.hearted #woman:after {
+	background-image: url(img/scene_BookStore/woman-3.png);
+	background-repeat: no-repeat;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	animation: bookstore-woman-squint;
+	animation-duration: 2s;
+	animation-delay: 9s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(10, end);
+}
 .scene_BookStore .exit {
 	background-image: url(img/scene_BookStore/exit.png);
 	position: absolute;
