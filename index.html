@@ -4,7 +4,7 @@
 	<title>Fruitflan</title>
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="fruitflan.css">
+	<!-- <link rel="stylesheet" type="text/css" href="fruitflan.css"> -->
 	<!-- <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet"> -->
 	<link href="lib/video-js.css" rel="stylesheet">
 	<!-- If you'd like to support IE8 -->
@@ -367,7 +367,34 @@
 <!-- <script type="text/javascript" src="http://gabelerner.github.io/canvg/rgbcolor.js"></script>  -->
 <!-- <script type="text/javascript" src="http://gabelerner.github.io/canvg/StackBlur.js"></script> -->
 <!-- <script type="text/javascript" src="http://gabelerner.github.io/canvg/canvg.js"></script>  -->
-<script type="text/javascript" src="fruitflan.js"></script>
+<script type="text/javascript">
+
+var url = 'fruitflan';
+
+Modernizr.on('videoautoplay', function(result) {
+  if (result) {
+    // supported
+    url = 'fruitflan-v';
+  }
+
+	var head = document.head;
+	var body = document.body;
+	var link = document.createElement('link');
+	var script = document.createElement('script');
+
+	link.type = 'text/css';
+	link.rel = 'stylesheet';
+	link.href = url + '.css';
+
+	script.type = 'text/javascript';
+	script.src = url + '.js';
+
+	head.appendChild(link);
+	body.appendChild(script);
+
+});
+
+</script>
 
 </body>
 </html>
